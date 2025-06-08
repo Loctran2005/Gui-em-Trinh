@@ -375,6 +375,17 @@
         setTimeout(() => createHeartPhotoCentered(i, totalPhotos), i * 70);
       }
     }
+    document.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+    });
+    document.onkeydown = function(e) {
+    if (e.keyCode == 123) {
+        return false;
+    }
+    }
+    document.oncontextmenu = function(e) {
+        return false;
+    }
   </script>
 </body>
 </html>
